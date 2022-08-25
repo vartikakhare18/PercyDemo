@@ -1,0 +1,52 @@
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'idea'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+buildscript {
+    def artifactoryCredentials = {
+        username "${project.getProperty('ivy.user')}"
+        password "${project.getProperty('ivy.passwd')}"
+    }
+
+    repositories {
+        maven {
+            name 'repo-maven'
+            url "${artifactoryURL}/repo"
+            artifactoryCredentials
+        }
+        ivy {
+            name 'repo-ivy'
+            url "${artifactoryURL}/repo"
+            artifactoryCredentials
+        }
+
+    }
+
+    configurations.classpath {
+        resolutionStrategy {
+            cacheChangingModulesFor 0, 'seconds'
+            cacheDynamicVersionsFor 10, 'minutes'
+        }
+    }
+
+    dependencies {
+        classpath "org.codehaus.gpars:gpars:1.1.0"
+        classpath(
+                "org.sonarsource.scanner.api:sonar-scanner-api:2.9.0.887",
+                "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2",
+        )
+        classpath("com.netspend.buildtools.gradle-plugins:ns-setup:$buildtoolsVersion") {
+            changing = true
+        }
+    }
+
+}
+
+dependencies{
+    compile fileTree(dir:'src/jars',include:'*.jar')
+}

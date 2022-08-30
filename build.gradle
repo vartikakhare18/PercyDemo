@@ -1,52 +1,150 @@
-apply plugin: 'groovy'
-apply plugin: 'java'
-apply plugin: 'idea'
-
-group 'org.example'
-version '1.0-SNAPSHOT'
-
-sourceCompatibility = 1.8
-
+import java.text.SimpleDateFormat
 buildscript {
+
     def artifactoryCredentials = {
         username "${project.getProperty('ivy.user')}"
         password "${project.getProperty('ivy.passwd')}"
     }
 
     repositories {
-        maven {
-            name 'repo-maven'
-            url "${artifactoryURL}/repo"
-            artifactoryCredentials
-        }
         ivy {
-            name 'repo-ivy'
-            url "${artifactoryURL}/repo"
-            artifactoryCredentials
+            name 'thirdPartyMavenRepository'
+            url "$artifactoryURL/thirdparty-maven/"
+            layout 'maven'
+            credentials artifactoryCredentials
         }
-
-    }
-
-    configurations.classpath {
-        resolutionStrategy {
-            cacheChangingModulesFor 0, 'seconds'
-            cacheDynamicVersionsFor 10, 'minutes'
+        maven {
+            url 'http://artifactory.test.aus.netspend.net/artifactory/repo'
         }
     }
 
     dependencies {
-        classpath "org.codehaus.gpars:gpars:1.1.0"
         classpath(
-                "org.sonarsource.scanner.api:sonar-scanner-api:2.9.0.887",
+                "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}",
+                "org.sonarsource.scanner.api:sonar-scanner-api:2.9.0.887" ,
                 "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2",
+                //"com.netspend.buildtools.gradle-plugins:ns-setup:$buildtoolsVersion"
         )
-        classpath("com.netspend.buildtools.gradle-plugins:ns-setup:$buildtoolsVersion") {
-            changing = true
-        }
+    }
+}
+
+
+repositories {
+
+    def artifactoryCredentials = {
+        username "${project.getProperty('ivy.user')}"
+        password "${project.getProperty('ivy.passwd')}"
+    }
+    ivy {
+        name 'thirdPartyMavenRepository'
+        url "$artifactoryURL/thirdparty-maven/"
+        layout 'maven'
+        credentials artifactoryCredentials
     }
 
+    ivy {
+        name 'devRepository'
+        url "$artifactoryURL/dev-artifacts/"
+        credentials artifactoryCredentials
+    }
+    maven {
+        url 'http://artifactory.test.aus.netspend.net/artifactory/repo'
+    }
 }
 
-dependencies{
-    compile fileTree(dir:'src/jars',include:'*.jar')
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'groovy'
+//apply plugin: 'ns-setup'
+defaultTasks 'build'
+
+group = 'com.netspend.test-management'
+test.enabled = false
+
+//def ivy_user_home = System.getenv('IVY_USER_HOME') ?: "${System.getProperty('user.home')}/.ivy2"
+wrapper {
+    // This is here to make IntelliJ stop changing this setting to gradle.org
+    gradleVersion = '4.10'
+    distributionUrl = "http://artifactory.test.aus.netspend.net/artifactory/gradle/gradle-${gradleVersion}-bin.zip"
 }
+
+dependencies {
+    compile fileTree(dir: 'src/jars/jar_files', include: ['*.jar'])
+
+    compile([group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: "${springBootVersion}"]) {
+        exclude group: 'org.jboss.logging'
+        exclude group: 'com.fasterxml'
+    }
+
+    compile (
+            [group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.7'],
+            [group: 'org.codehaus.groovy.modules.http-builder', name: 'http-builder', version: '0.6'],
+            [group: 'org.codehaus.groovy', name: 'groovy', version: '2.4.4'],
+            [group: "mysql", name: "mysql-connector-java", version: "8.0.11"],
+            [group: "org.apache.httpcomponents", name: "httpclient", version: "4.5.3"],
+            [group: 'joda-time', name: 'joda-time', version: '2.1'],
+            [group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.0.42'],
+            [group:'org.hibernate',name:'hibernate-validator',version:'5.3.6.Final']
+
+    )
+
+}
+
+springBoot {
+    buildInfo {
+        // Generate extra build info.
+        properties{
+            additional = [
+                    operatingSystem: "${System.properties['os.name']} (${System.properties['os.version']})",
+                    continuousIntegration: project.hasProperty("ciBuild"),
+                    machine: InetAddress.localHost.hostName,
+                    // Override buildInfo property time
+                    time: buildTime(),
+                    revision: project.hasProperty('vcsRevision') ? project.getProperty('vcsRevision') : 'DEV-BUILD',
+                    number : project.getProperty('version').replaceAll("-SNAPSHOT", "") + "." + (project.hasProperty('buildNumber') ? project.getProperty('buildNumber') :'DEV-BUILD')
+            ]
+        }
+
+    }
+}
+
+def buildTime() {
+    final dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ssZ")
+    dateFormat.timeZone = TimeZone.getTimeZone('GMT')
+    dateFormat.format(new Date())
+}
+
+// Pass all args as -PjvmArgs="-Dsomething=true -Dsomethingelse=bad"
+bootRun {
+    if (project.hasProperty('jvmArgs')) {
+        jvmArgs = (project.jvmArgs.split("\\s+") as List)
+    }
+}
+//compileJava.dependsOn(processResources)
+//project.version = version + "." + (project.hasProperty('buildNumber') ? project.getProperty('buildNumber') :'DEV-BUILD')
+project.version = null
+
+
+
+task springBootTask (dependsOn: 'assemble') {
+    doLast {
+        javaexec {
+            main = 'com.netspend.dailyregressionreports.DRR'
+            classpath = sourceSets.main.runtimeClasspath
+        }
+    }
+}
+
+task run(dependsOn:  'assemble'){
+    doLast {
+        javaexec {
+            main = 'com.netspend.TestRun'
+            classpath = sourceSets.main.runtimeClasspath
+        }
+    }
+}
+
+project.archivesBaseName = 'test-management'
+
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+            .table1,{
+  border-collapse: collapse;
+}
+
+.tr1:nth-child(even) {
+  background-color: bisque;
+  }
+
+.td1, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+
+  }
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: underline;
+}
+h2{
+display: inline-block
+}
+
+}
+    </style>
+</head>
+<body>
+<h1 id="heading" style="color: white;font-style: normal;font-family: sans-serif;bordr: 10px;border-bottom: 6px solid black;background-color: #5191D1;text-align:center">NETSPEND TEST MANAGEMENT TOOL</h1>
+<div id="input" style="text-align:center;font-size: larger;font-family: sans-serif;">
+    <a href="http://testmanagement.hq.netspend.com:8080/" style="color:#F52E04">Home</a>
+    </div>
+$error
+<div id="executionHistory">$viewExecution</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+function makeDeleteButtonVisible(){
+   $('input:checkbox').change(function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            $("#delete").css("visibility","visible");
+            $("#selectAll").css("visibility","visible");
+        } else {
+            $("#delete").css("visibility","hidden");
+            $("#selectAll").css("visibility","hidden");
+        }
+    });
+}
+
+function selectAll(){
+         var inputs = document.querySelectorAll("input[type='checkbox']");
+        for(var i = 0; i < inputs.length; i++) {
+            inputs[i].checked = true;
+        }
+  }
+
+function deleteRow()
+{
+    var checkedValues;
+    var jiraKey = $(".jiraKey").text();
+        checkedValues = $('input:checkbox:checked').map(function() {
+  				        var row = $(this).parents(".tr1");
+                        return row.find('.name').text()+"splitter!!"+row.find('.envName').text()+"splitter!!"+row.find('.featureFilePath').text()+"splitter!!"+row.find('.userName').text();
+                        }).get();
+
+        $.ajax({
+            async: false,
+            url: '/validateSelectedRowData',
+            type: 'post',
+            contentType: 'application/json; charset=utf-8',
+            data: checkedValues.join("^^")+"~~"+jiraKey,
+            success: function (result) {
+            if(result.includes("User can not delete scenario")){
+            alert(result);
+            }
+            else if(result.includes("User is not authorized to delete the scenario/s executed by another user")){
+              alert(result);
+            }
+            else if(result.includes("An error occurred while deleting the below scenario in Database")){
+              alert(result);
+            }
+            else{
+                var confirmation = confirm("Want to delete Selected Scenario");
+                if (confirmation == true) {
+                    $.ajax({
+                      async: false,
+                      url: '/deleteScenarioFromDB',
+                      type: 'post',
+                      success: function (result) {
+                      location.reload();
+                      },
+                      error: function (res) {
+                         alert("XML: not working! " + res.statusText);
+                      }
+                    });
+                }
+            }
+
+            },
+            error: function (res) {
+              alert("XML: not working! " + res.statusText);
+            }
+        });
+}
+
+
+</script>
+
+</body>
+</html>

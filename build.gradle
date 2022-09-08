@@ -136,7 +136,7 @@ task springBootTask (dependsOn: 'assemble') {
     }
 }
 
-task run(dependsOn:  'assemble'){
+task run(dependsOn: 'assemble'){
     doLast {
         javaexec {
             main = 'com.netspend.TestRun'
@@ -145,6 +145,5 @@ task run(dependsOn:  'assemble'){
     }
 }
 
-project.archivesBaseName = 'test-management'
 
 

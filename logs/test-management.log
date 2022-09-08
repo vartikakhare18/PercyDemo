@@ -1,139 +1,88 @@
-2022-08-30 13:46:09.846  INFO 4416 --- [main] com.netspend.App                         : Starting App on VDI-DP-W10C-208 with PID 4416 (C:\PercyDemo\build\classes\groovy\main started by vkhare in C:\PercyDemo)
-2022-08-30 13:46:09.856  INFO 4416 --- [main] com.netspend.App                         : No active profile set, falling back to default profiles: default
-2022-08-30 13:46:09.986  INFO 4416 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@101952da: startup date [Tue Aug 30 13:46:09 IST 2022]; root of context hierarchy
-2022-08-30 13:46:11.888  INFO 4416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-08-30 13:46:11.927  INFO 4416 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-30 13:46:11.927  INFO 4416 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2022-08-30 13:46:11.941  INFO 4416 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\bin;C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\dev\tools\gradle\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Common Files\ThinPrint\;C:\Program Files\nodejs\;C:\Users\vkhare\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\BrowserStackLocal\;C:\Users\vkhare\AppData\Roaming\npm;;.]
-2022-08-30 13:46:12.483  WARN 4416 --- [localhost-startStop-1] o.a.tomcat.util.scan.StandardJarScanner  : Failed to scan [file:/C:/PercyDemo/src/jars/xercesImpl.jar] from classloader hierarchy
+2022-09-08 18:11:32.113  INFO 16624 --- [main] com.netspend.App                         : Starting App on VDI-DP-W10C-208 with PID 16624 (C:\PercyDemo\build\classes\groovy\main started by vkhare in C:\PercyDemo)
+2022-09-08 18:11:32.180  INFO 16624 --- [main] com.netspend.App                         : No active profile set, falling back to default profiles: default
+2022-09-08 18:11:32.268  INFO 16624 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@14555e0a: startup date [Thu Sep 08 18:11:32 IST 2022]; root of context hierarchy
+2022-09-08 18:11:36.022  INFO 16624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 18:11:36.071  INFO 16624 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-08 18:11:36.072  INFO 16624 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-09-08 18:11:36.092  INFO 16624 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\bin;C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\dev\tools\gradle\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Common Files\ThinPrint\;C:\Program Files\nodejs\;C:\Users\vkhare\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\BrowserStackLocal\;C:\Users\vkhare\AppData\Roaming\npm;;.]
+2022-09-08 18:11:36.421  INFO 16624 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-08 18:11:36.422  INFO 16624 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4155 ms
+2022-09-08 18:11:37.081  INFO 16624 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2022-09-08 18:11:37.088  INFO 16624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-09-08 18:11:37.090  INFO 16624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-09-08 18:11:37.090  INFO 16624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2022-09-08 18:11:37.091  INFO 16624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2022-09-08 18:11:37.376  INFO 16624 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-09-08 18:11:37.870  INFO 16624 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@14555e0a: startup date [Thu Sep 08 18:11:32 IST 2022]; root of context hierarchy
+2022-09-08 18:11:38.104  INFO 16624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2022-09-08 18:11:38.110  INFO 16624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022-09-08 18:11:38.172  INFO 16624 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-09-08 18:11:38.173  INFO 16624 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-09-08 18:11:38.297  INFO 16624 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-09-08 18:11:38.997  INFO 16624 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2022-09-08 18:11:39.097  INFO 16624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 18:11:39.103  INFO 16624 --- [main] com.netspend.App                         : Started App in 7.68 seconds (JVM running for 10.471)
+2022-09-08 18:11:39.123  INFO 16624 --- [main] com.netspend.App                         : ************* STARTED Netspend Test Management WebAPP **************
+2022-09-08 18:14:44.815  INFO 16624 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2022-09-08 18:14:44.816  INFO 16624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2022-09-08 18:14:44.859  INFO 16624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 43 ms
+2022-09-08 20:26:29.176  INFO 6572 --- [main] com.netspend.App                         : Starting App on VDI-DP-W10C-208 with PID 6572 (C:\PercyDemo\build\classes\groovy\main started by vkhare in C:\PercyDemo)
+2022-09-08 20:26:29.181  INFO 6572 --- [main] com.netspend.App                         : No active profile set, falling back to default profiles: default
+2022-09-08 20:26:29.332  INFO 6572 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3d6f0054: startup date [Thu Sep 08 20:26:29 IST 2022]; root of context hierarchy
+2022-09-08 20:26:31.966  INFO 6572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 20:26:32.028  INFO 6572 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-08 20:26:32.029  INFO 6572 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2022-09-08 20:26:32.051  INFO 6572 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\bin;C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\dev\tools\gradle\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Common Files\ThinPrint\;C:\Program Files\nodejs\;C:\Users\vkhare\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\BrowserStackLocal\;C:\Users\vkhare\AppData\Roaming\npm;;.]
+2022-09-08 20:26:32.259  INFO 6572 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-08 20:26:32.261  INFO 6572 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2929 ms
+2022-09-08 20:26:32.701  INFO 6572 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2022-09-08 20:26:32.709  INFO 6572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-09-08 20:26:32.710  INFO 6572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-09-08 20:26:32.711  INFO 6572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2022-09-08 20:26:32.711  INFO 6572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2022-09-08 20:26:32.915  INFO 6572 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-09-08 20:26:33.419  INFO 6572 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3d6f0054: startup date [Thu Sep 08 20:26:29 IST 2022]; root of context hierarchy
+2022-09-08 20:26:33.563  INFO 6572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2022-09-08 20:26:33.578  INFO 6572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022-09-08 20:26:33.625  INFO 6572 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-09-08 20:26:33.644  INFO 6572 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-09-08 20:26:33.914  INFO 6572 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-09-08 20:26:34.787  INFO 6572 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2022-09-08 20:26:34.888 ERROR 6572 --- [main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8080]]
 
-java.io.FileNotFoundException: C:\PercyDemo\src\jars\xercesImpl.jar (The system cannot find the file specified)
-	at java.util.zip.ZipFile.open(Native Method) ~[na:1.8.0_222]
-	at java.util.zip.ZipFile.<init>(ZipFile.java:225) ~[na:1.8.0_222]
-	at java.util.zip.ZipFile.<init>(ZipFile.java:155) ~[na:1.8.0_222]
-	at java.util.jar.JarFile.<init>(JarFile.java:166) ~[na:1.8.0_222]
-	at java.util.jar.JarFile.<init>(JarFile.java:130) ~[na:1.8.0_222]
-	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:188) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.JarFileUrlJar.<init>(JarFileUrlJar.java:65) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:49) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:374) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.StandardJarScanner.processURLs(StandardJarScanner.java:309) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.StandardJarScanner.doScanClassPath(StandardJarScanner.java:266) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:229) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262) [tomcat-embed-jasper-8.0.42.jar:8.0.42]
-	at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:106) [tomcat-embed-jasper-8.0.42.jar:8.0.42]
-	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:101) [tomcat-embed-jasper-8.0.42.jar:8.0.42]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5245) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:256) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:198) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication$run.call(Unknown Source) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48) [groovy-all-2.4.7.jar:2.4.7]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113) [groovy-all-2.4.7.jar:2.4.7]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133) [groovy-all-2.4.7.jar:2.4.7]
+	at com.netspend.App.main(App.groovy:12) [main/:na]
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	... 17 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_222]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_222]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_222]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_222]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_222]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1150) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	... 18 common frames omitted
 
-2022-08-30 13:46:12.490  WARN 4416 --- [localhost-startStop-1] o.a.tomcat.util.scan.StandardJarScanner  : Failed to scan [file:/C:/PercyDemo/src/jars/xml-apis.jar] from classloader hierarchy
-
-java.io.FileNotFoundException: C:\PercyDemo\src\jars\xml-apis.jar (The system cannot find the file specified)
-	at java.util.zip.ZipFile.open(Native Method) ~[na:1.8.0_222]
-	at java.util.zip.ZipFile.<init>(ZipFile.java:225) ~[na:1.8.0_222]
-	at java.util.zip.ZipFile.<init>(ZipFile.java:155) ~[na:1.8.0_222]
-	at java.util.jar.JarFile.<init>(JarFile.java:166) ~[na:1.8.0_222]
-	at java.util.jar.JarFile.<init>(JarFile.java:130) ~[na:1.8.0_222]
-	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:188) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.JarFileUrlJar.<init>(JarFileUrlJar.java:65) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:49) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:374) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.StandardJarScanner.processURLs(StandardJarScanner.java:309) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.StandardJarScanner.doScanClassPath(StandardJarScanner.java:266) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:229) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262) [tomcat-embed-jasper-8.0.42.jar:8.0.42]
-	at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:106) [tomcat-embed-jasper-8.0.42.jar:8.0.42]
-	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:101) [tomcat-embed-jasper-8.0.42.jar:8.0.42]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5245) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
-
-2022-08-30 13:46:12.497  WARN 4416 --- [localhost-startStop-1] o.a.tomcat.util.scan.StandardJarScanner  : Failed to scan [file:/C:/PercyDemo/src/jars/serializer.jar] from classloader hierarchy
-
-java.io.FileNotFoundException: C:\PercyDemo\src\jars\serializer.jar (The system cannot find the file specified)
-	at java.util.zip.ZipFile.open(Native Method) ~[na:1.8.0_222]
-	at java.util.zip.ZipFile.<init>(ZipFile.java:225) ~[na:1.8.0_222]
-	at java.util.zip.ZipFile.<init>(ZipFile.java:155) ~[na:1.8.0_222]
-	at java.util.jar.JarFile.<init>(JarFile.java:166) ~[na:1.8.0_222]
-	at java.util.jar.JarFile.<init>(JarFile.java:130) ~[na:1.8.0_222]
-	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:188) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.JarFileUrlJar.<init>(JarFileUrlJar.java:65) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:49) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:374) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.StandardJarScanner.processURLs(StandardJarScanner.java:309) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.StandardJarScanner.doScanClassPath(StandardJarScanner.java:266) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:229) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262) [tomcat-embed-jasper-8.0.42.jar:8.0.42]
-	at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:106) [tomcat-embed-jasper-8.0.42.jar:8.0.42]
-	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:101) [tomcat-embed-jasper-8.0.42.jar:8.0.42]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5245) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411) [tomcat-embed-core-8.5.31.jar:8.5.31]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
-
-2022-08-30 13:46:12.513  INFO 4416 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-08-30 13:46:12.529  INFO 4416 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-08-30 13:46:12.530  INFO 4416 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2544 ms
-2022-08-30 13:46:12.901  INFO 4416 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2022-08-30 13:46:12.907  INFO 4416 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2022-08-30 13:46:12.908  INFO 4416 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2022-08-30 13:46:12.908  INFO 4416 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2022-08-30 13:46:12.917  INFO 4416 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2022-08-30 13:46:13.142  INFO 4416 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2022-08-30 13:46:13.462  INFO 4416 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@101952da: startup date [Tue Aug 30 13:46:09 IST 2022]; root of context hierarchy
-2022-08-30 13:46:13.615  INFO 4416 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2022-08-30 13:46:13.619  INFO 4416 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2022-08-30 13:46:13.656  INFO 4416 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2022-08-30 13:46:13.656  INFO 4416 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2022-08-30 13:46:13.807  INFO 4416 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-08-30 13:46:14.314  INFO 4416 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2022-08-30 13:46:14.421  INFO 4416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-08-30 13:46:14.427  INFO 4416 --- [main] com.netspend.App                         : Started App in 5.23 seconds (JVM running for 6.739)
-2022-08-30 13:46:14.439  INFO 4416 --- [main] com.netspend.App                         : ************* STARTED Netspend Test Management WebAPP **************
-2022-08-30 13:46:51.203  INFO 4416 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2022-08-30 13:46:51.204  INFO 4416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2022-08-30 13:46:51.252  INFO 4416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 48 ms
-2022-08-30 16:13:48.686  INFO 6980 --- [main] com.netspend.App                         : Starting App on VDI-DP-W10C-208 with PID 6980 (C:\PercyDemo\build\classes\groovy\main started by vkhare in C:\PercyDemo)
-2022-08-30 16:13:48.708  INFO 6980 --- [main] com.netspend.App                         : No active profile set, falling back to default profiles: default
-2022-08-30 16:13:48.897  INFO 6980 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3d6f0054: startup date [Tue Aug 30 16:13:48 IST 2022]; root of context hierarchy
-2022-08-30 16:13:51.867  INFO 6980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-08-30 16:13:51.924  INFO 6980 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-30 16:13:51.925  INFO 6980 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2022-08-30 16:13:51.942  INFO 6980 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\bin;C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\dev\tools\gradle\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Common Files\ThinPrint\;C:\Program Files\nodejs\;C:\Users\vkhare\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\BrowserStackLocal\;C:\Users\vkhare\AppData\Roaming\npm;;.]
-2022-08-30 16:13:52.366  INFO 6980 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-08-30 16:13:52.375  INFO 6980 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-08-30 16:13:52.375  INFO 6980 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3478 ms
-2022-08-30 16:13:52.743  INFO 6980 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2022-08-30 16:13:52.757  INFO 6980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2022-08-30 16:13:52.763  INFO 6980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2022-08-30 16:13:52.763  INFO 6980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2022-08-30 16:13:52.764  INFO 6980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2022-08-30 16:13:53.104  INFO 6980 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2022-08-30 16:13:53.493  INFO 6980 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3d6f0054: startup date [Tue Aug 30 16:13:48 IST 2022]; root of context hierarchy
-2022-08-30 16:13:53.596  INFO 6980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2022-08-30 16:13:53.598  INFO 6980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2022-08-30 16:13:53.637  INFO 6980 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2022-08-30 16:13:53.638  INFO 6980 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2022-08-30 16:13:53.765  INFO 6980 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-08-30 16:13:54.181  INFO 6980 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2022-08-30 16:13:54.250  INFO 6980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-08-30 16:13:54.263  INFO 6980 --- [main] com.netspend.App                         : Started App in 6.65 seconds (JVM running for 8.631)
-2022-08-30 16:13:54.276  INFO 6980 --- [main] com.netspend.App                         : ************* STARTED Netspend Test Management WebAPP **************
-2022-08-30 16:14:23.738  INFO 6980 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2022-08-30 16:14:23.739  INFO 6980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2022-08-30 16:14:23.786  INFO 6980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 46 ms
+2022-09-08 20:26:34.962  INFO 6572 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
